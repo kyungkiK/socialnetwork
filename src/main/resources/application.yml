@@ -3,10 +3,10 @@ jwt:
 
 spring:
   datasource:
-    url: ${url}
-    driver-class-name: ${driverClassName}
-    username: ${username}
-    password: ${password}
+    url: jdbc:mariadb://${DB_url}:${DB_port}/${DB_dataBaseName}?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${DB_name}
+    password: ${DB_password}
 
   jpa:
     hibernate:
